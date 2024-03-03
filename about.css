@@ -64,7 +64,11 @@ body {
 }
 
 .content table,td,tr{
-    border: 2px solid black;
+    border: 0.1px solid black;
+}
+
+.content table{
+    margin-left: 100x ;
 }
 
 .video{
