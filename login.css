@@ -53,23 +53,26 @@ body {
     width: 100%;
     position: fixed;
 }
-.form-box{
+
+.form-box {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 50px 60px 70px;
     border-radius: 30px;
     text-align: center;
 }
-.form-box h1{
+
+.form-box h1 {
     font-size: 30px;
     position: relative;
-    color:  rgb(29, 65, 110);
+    color: rgb(29, 65, 110);
     margin-bottom: 60px;
 }
-.form-box h1::after{
+
+.form-box h1::after {
     content: '';
     width: 30px;
     height: 4px;
@@ -80,8 +83,9 @@ body {
     left: 50%;
     transform: translate(-50%);
 }
-.input-field{
-    background-color: #eaeaea ;
+
+.input-field {
+    background-color: #eaeaea;
     margin: 15px 0;
     border-radius: 30px;
     display: flex;
@@ -90,29 +94,33 @@ body {
     overflow: hidden;
     transition: max-height 0.5s;
 }
-input{
+
+input {
     width: auto;
     background: 0;
     border: 0;
     outline: 0;
     padding: 18px 15px;
 }
-form p{
+
+form p {
     text-align: left;
     font-size: 12px;
     margin-top: 1px;
 }
 
-form i{
+form i {
     margin-left: 15px;
     color: #555;
 }
-.btn-fld{
-    width:100%;
+
+.btn-fld {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.btn-fld button{
+
+.btn-fld button {
     flex-basis: 48%;
     background: rgb(29, 65, 110);
     color: white;
@@ -125,60 +133,98 @@ form i{
     cursor: pointer;
     transition: background 0.5s;
 }
-.btn-fld button.disable{
+
+.btn-fld button.disable {
     background: #eaeaea;
     color: #555;
 }
 
 .label-check {
     display: none;
-  }
-  
-  .hamburger-label {
+}
+
+.hamburger-label {
     width: 70px;
     height: 58px;
     display: block;
     cursor: pointer;
     float: right;
     line-height: 3px;
-    margin-top: 12px; 
-  }
-  
-  .hamburger-label div {
+    margin-top: 12px;
+}
+
+.hamburger-label div {
     width: 60px;
     height: 6px;
     background-color: #fff;
     position: absolute;
     line-height: 4px;
-  }
-  
-  .line1 {
+}
+
+.line1 {
     transition: all .3s;
-  }
-  
-  .line2 {
+}
+
+.line2 {
     margin: 18px 0 0 0;
     transition: 0.3s;
-  }
-  
-  .line3 {
+}
+
+.line3 {
     margin: 36px 0 0 0;
     transition: 0.3s;
-  }
-  
-  #label-check:checked + .hamburger-label .line1 {
+}
+
+#label-check:checked+.hamburger-label .line1 {
     transform: rotate(45deg) scaleX(.55) translate(29px, -4.5px);
     border-radius: 50px 50px 50px 0px;
-  }
-  
-  #label-check:checked + .hamburger-label .line3 {
+}
+
+#label-check:checked+.hamburger-label .line3 {
     transform: rotate(-45deg) scaleX(.55) translate(29px, 4.5px);
     border-radius: 0px 50px 50px 50px;
-  }
-  
-  #label-check:checked + .hamburger-label .line2 {
+}
+
+#label-check:checked+.hamburger-label .line2 {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     width: 48px;
-  }
-  
+}
+
+.f{
+    background-color: rgb(29, 65, 110);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+@media (max-width: 1171px) {
+    .navbar ul {
+        float: left;
+    }
+
+    .logo {
+        padding: 0 25px;
+    }
+
+    .navbar li {
+        margin-left: 0;
+        margin-top: 10px;
+        /* Adjust as needed */
+        text-align: center;
+    }
+
+    .navbar li a {
+        padding: 10px 25px;
+    }
+
+    .hamburger-label {
+        margin-top: 0;
+        margin-right: 20px;
+        /* Adjust as needed */
+    }
+}

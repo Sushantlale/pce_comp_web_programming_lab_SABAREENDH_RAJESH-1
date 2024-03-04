@@ -74,3 +74,12 @@ body {
 .video{
     float: right;
 }
+.f{
+    background-color: rgb(29, 65, 110);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
