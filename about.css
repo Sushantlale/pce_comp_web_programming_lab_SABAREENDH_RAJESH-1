@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: montserrat;
+    font-family: Montserrat; /* Corrected font name */
 }
 
 .navbar {
@@ -48,11 +48,10 @@ body {
 
 .bkc {
     margin-top: 70px;
-    background-color: rgb(101, 152, 219);
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     height: 100vh;
     width: 100%;
-
 }
 
 .content {
@@ -60,26 +59,37 @@ body {
     font-size: 25px;
     font-weight: 1000;
     font-style: normal;
-    background-color: rgb(101, 152, 219);
+    background-color: rgb(255, 255, 255);
 }
 
-.content table,td,tr{
+.content table,
+.content td,
+.content tr {
     border: 0.1px solid black;
 }
 
-.content table{
-    margin-left: 100x ;
+.content table {
+    margin-left: 100px; /* Corrected value */
 }
 
-.video{
+.video {
     float: right;
 }
-.f{
-    background-color: rgb(29, 65, 110);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+
+.f {
     position: fixed;
-    width: 100%;
-    bottom: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgb(29, 65, 110);
+  color: white;
+  text-align: center;
+}
+
+.map{
+    padding: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
