@@ -21,59 +21,102 @@
     <div class="bkc">
         <div class="content">
             <h1>About Us</h1>
-            <p>At ReSure, we are dedicated to revolutionizing the way patients engage with clinical trials and medical research studies. Our platform was created with the vision of breaking down barriers and making participation in these essential studies more accessible and convenient for patients worldwide.
-            <p>We prioritize transparency, confidentiality, and the well-being of our users. Our commitment to privacy ensures that all information shared on our platform is kept secure and confidential, adhering to strict privacy standards.</p>
-                Our team comprises passionate individuals with diverse backgrounds in healthcare, technology, and patient advocacy. Together, we leverage our expertise to develop user-friendly tools that empower patients to easily find and participate in clinical trials and research studies that align with their health needs and preferences.</p>
+            <p>At ReSure, we are dedicated to revolutionizing the way patients engage with clinical trials and medical
+                research studies. Our platform was created with the vision of breaking down barriers and making
+                participation in these essential studies more accessible and convenient for patients worldwide.
+            <p>We prioritize transparency, confidentiality, and the well-being of our users. Our commitment to privacy
+                ensures that all information shared on our platform is kept secure and confidential, adhering to strict
+                privacy standards.</p>
+            Our team comprises passionate individuals with diverse backgrounds in healthcare, technology, and patient
+            advocacy. Together, we leverage our expertise to develop user-friendly tools that empower patients to easily
+            find and participate in clinical trials and research studies that align with their health needs and
+            preferences.</p>
             <h2>Our Mission</h2>
-            <p>Our mission at [Company Name] is to empower patients to play an active role in shaping the future of medicine. We believe that every patient deserves the opportunity to contribute to medical advancements and potentially benefit from cutting-edge treatments.</p>
-            <p>Through collaboration with leading healthcare institutions, researchers, and pharmaceutical companies, we strive to facilitate meaningful connections that drive medical progress forward. By bridging the gap between patients and research opportunities, we aim to facilitate groundbreaking discoveries that benefit us all and improve the lives of millions worldwide.</p>
+            <p>Our mission at [Company Name] is to empower patients to play an active role in shaping the future of
+                medicine. We believe that every patient deserves the opportunity to contribute to medical advancements
+                and potentially benefit from cutting-edge treatments.</p>
+            <p>Through collaboration with leading healthcare institutions, researchers, and pharmaceutical companies, we
+                strive to facilitate meaningful connections that drive medical progress forward. By bridging the gap
+                between patients and research opportunities, we aim to facilitate groundbreaking discoveries that
+                benefit us all and improve the lives of millions worldwide.</p>
             <h2>Location</h2>
             <p>Our hospital is located at:</p>
             <iframe class="map"
                 src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7660.384377947607!2d72.84358465688231!3d19.005156170492942!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1709490079764!5m2!1sen!2sin"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div id="map"></div>
-            <div class="content">
 
+            <div id="map"></div>
+            <button class="loc" onclick="getLocation()">Get My Location</button>
+            <p id="demo"></p>
+            <div class="content">
                 <h2>Research Studies</h2>
-                <p>Check out our latest research studies and clinical trials:</p>
+                <p>Explore our latest research studies and clinical trials:</p>
                 <table>
                     <tr>
-                        <th>StudyTitle</th>
+                        <th>Study Title</th>
                         <th>Description</th>
                         <th>Duration</th>
+                        <th>Location</th> <!-- New heading for study location -->
+                        <th>article</th>
                     </tr>
                     <tr>
-                        <td>Study 1</td>
-                        <td>Lorem ipsum </td>
-                        <td>6 months</td>
+                        <td>Diabetes Management Study</td>
+                        <td>A randomized controlled trial investigating the effectiveness of a new medication for
+                            managing type 2 diabetes.</td>
+                        <td>12 months</td>
+                        <td>New York, NY</td> <!-- Example location for the study -->
+                        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9599361/" target="_blank">link</a>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Study 2</td>
-                        <td>Consectetur </td>
-                        <td>1 year</td>
+                        <td>Heart Disease Prevention Trial</td>
+                        <td>An observational study examining the impact of lifestyle interventions on reducing the risk
+                            of coronary heart disease.</td>
+                        <td>24 months</td>
+                        <td>Los Angeles, CA</td> <!-- Example location for the study -->
+                        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7301047/" target="_blank">link</a>
+                        </td>
                     </tr>
                 </table>
             </div>
+
             <h2>Research Video</h2>
             <p>Watch a video about our latest research:</p>
-            <video width="320" height="300" controls>
-                <source src="Cancer.mp4" type="video/mp4">
-            </video>
+            <div class="media-container">
+                <video class="media" width="320" height="240" controls>
+                    <source src="Cancer.mp4" type="video/mp4">
+                </video>
 
-            <h2>Participate in Research</h2>
-            <p>Listen to an audio message about participating in research:</p>
-            <audio controls>
-                <source src="Cancer Research.m4a" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-
+                <h2>Participate in Research</h2>
+                <p>Listen to an audio message about participating in research:</p>
+                <audio class="media" controls>
+                    <source src="Cancer Research.m4a" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
+
         <footer class="f">
             <p>@ALL RIGHTS THE RESERVED TO RESEURE PVT.LTD</p>
         </footer>
     </div>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById("demo").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+        }
+
+    </script>
 </body>
 
 </html>
