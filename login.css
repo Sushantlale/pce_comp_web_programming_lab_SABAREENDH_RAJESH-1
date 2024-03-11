@@ -201,6 +201,94 @@ form i {
     bottom: 0;
 }
 
+/* Add this code to your existing CSS */
+
+/* General styles for responsiveness */
+@media(max-width: 1171px) {
+    .navbar ul {
+        float: left;
+    }
+
+    .logo {
+        padding: 0 25px;
+    }
+
+    .navbar li {
+        margin-left: 0;
+        margin-top: 10px;
+        /* Adjust as needed */
+        text-align: center;
+    }
+
+    .navbar li a {
+        padding: 10px 25px;
+    }
+
+    .hamburger-label {
+        margin-top: 0;
+        margin-right: 20px;
+        /* Adjust as needed */
+    }
+}
+
+/* Mobile responsiveness */
+@media(max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+
+    .navbar ul {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: rgb(29, 65, 110);
+        z-index: 999;
+    }
+
+    .navbar li {
+        float: none;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar li a {
+        padding: 10px 0;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar li:last-child a {
+        border-bottom: none;
+    }
+
+    .navbar .label-check:checked + .hamburger-label ~ ul {
+        display: block;
+    }
+
+    .logo {
+        padding: 20px;
+        float: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hamburger-label {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .hamburger-label div {
+        background-color: white;
+    }
+}
 
 @media (max-width: 1171px) {
     .navbar ul {
@@ -226,5 +314,101 @@ form i {
         margin-top: 0;
         margin-right: 20px;
         /* Adjust as needed */
+    }
+}
+
+/* Add this CSS to your existing stylesheet */
+
+.home-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: rgb(29, 65, 110);
+    width: 100%;
+    text-align: center;
+}
+
+.home-menu li {
+    display: block;
+    margin: 10px 0;
+}
+
+.home-menu li a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+.hamburger-label {
+    width: 70px;
+    height: 58px;
+    display: none; /* Initially hidden */
+    cursor: pointer;
+    float: right;
+    line-height: 3px;
+    margin-top: 12px;
+    position: relative; /* Adjusted position */
+}
+
+.hamburger-label div {
+    width: 60px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    line-height: 4px;
+}
+
+.line1 {
+    transition: all .3s;
+}
+
+.line2 {
+    margin: 18px 0 0 0;
+    transition: 0.3s;
+}
+
+.line3 {
+    margin: 36px 0 0 0;
+    transition: 0.3s;
+}
+
+#label-check:checked + .hamburger-label .line1 {
+    transform: rotate(45deg) scaleX(.55) translate(29px, -4.5px);
+    border-radius: 50px 50px 50px 0px;
+}
+
+#label-check:checked + .hamburger-label .line3 {
+    transform: rotate(-45deg) scaleX(.55) translate(29px, 4.5px);
+    border-radius: 0px 50px 50px 50px;
+}
+
+#label-check:checked + .hamburger-label .line2 {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 48px;
+}
+
+#label-check:checked ~ .home-menu {
+    display: block;
+}
+
+@media (max-width: 1171px) {
+    .main-menu {
+        display: none;
+    }
+
+    .hamburger-label {
+        display: block; /* Display when screen is smaller than 1171px */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .home-menu {
+        display: none; /* Hide initially */
     }
 }
