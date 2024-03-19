@@ -63,17 +63,17 @@ body {
 }
 
 .content table {
-    width: 80%; /* Adjust the width as per your preference */
-    margin: 0 auto; /* Center the table horizontally */
-    border-collapse: collapse; /* Collapse table borders */
+    width: 80%; 
+    margin: 0 auto; 
+    border-collapse: collapse; 
 }
 
 .content th,
 .content td {
     border: 1px solid black;
-    background-color:  #f2f2f2; /* Add border to table cells */
-    padding: 10px; /* Add padding to table cells */
-    text-align: center; /* Center align text within table cells */
+    background-color:  #f2f2f2; 
+    padding: 10px; 
+    text-align: center; 
 }
 
 .content th {
@@ -92,14 +92,14 @@ body {
 }
 
 .map {
-    width: 270px; /* Adjust the width as per your preference */
-    height: 170px; /* Adjust the height as per your preference */
-    margin:0 auto ; /* Center the map horizontally */    
+    width: 270px; 
+    height: 170px; 
+    margin:0 auto ; 
 }
-.loc{
+.loc{ 
     border-radius: 20px;
     background-color:rgb(28, 54, 86);
-    font-family: Montserrat; /* Corrected font name */
+    font-family: Montserrat;
     height: 50px;
     width: 101px;
     font-size: 15px;
