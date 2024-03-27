@@ -90,8 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signinbtn'])) {
 </head>
 
 <body>
-
-
+   <header> 
     <nav class="navbar">
         <label class="logo">ReSure</label>
         <ul class="normal">
@@ -116,12 +115,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signinbtn'])) {
             <li><a href="#">HELP</a></li>
             <li><a href="#">FEEDBACK</a></li>
         </ul>
-
-
     </nav>
-    <footer class="f">
+   </header>    
+   <footer class="f">
         <p>"@ALL RIGHTS THE RESERVED TO RESEURE PVT.LTD"</p>
-    </footer>
     <div class="content">
         <div class="form-box">
             <h1 id="title">Sign Up</h1>
@@ -151,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signinbtn'])) {
             </form>
         </div>
     </div>
-
+    </footer>
     <script>
         let signupbtn = document.getElementById("signupbtn");
         let signinbtn = document.getElementById("signinbtn");
