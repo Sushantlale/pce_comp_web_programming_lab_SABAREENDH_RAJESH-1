@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signinbtn'])) {
 
     </nav>
     <footer class="f">
-        <p>"@ALL RIGHTS THE RESERVED TO RESEURE PVT.LTD"</p>
+        <p style=" text-align: left; font-size: 12px; margin-top: 1px;>"@ALL RIGHTS THE RESERVED TO RESEURE PVT.LTD"</p>
     </footer>
     <div class="content">
         <div class="form-box">
