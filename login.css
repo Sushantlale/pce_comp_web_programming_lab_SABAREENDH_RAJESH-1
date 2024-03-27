@@ -46,6 +46,7 @@ body {
     line-height: 130px;
     padding: 0px 25px;
 }
+
 .navbar .home-menu {
     display: none;
 }
@@ -198,6 +199,28 @@ form i {
     color: #555;
 }
 
+/* CSS for the submit button */
+.btn-fld button[type="submit"] {
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    /* White text color */
+    padding: 10px 20px;
+    /* Padding */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    /* Cursor style */
+    margin-right: 10px;
+    /* Add some space between buttons */
+}
+
+/* Hover effect for the submit button */
+.btn-fld button[type="submit"]:hover {
+    background-color: #45a049;
+    /* Darker green background on hover */
+}
+
 .f {
     background-color: rgb(29, 65, 110);
     color: white;
@@ -208,29 +231,27 @@ form i {
     bottom: 0;
 }
 
-@media(max-width: 1171px) {
-    
-}
+@media(max-width: 1171px) {}
 
 
 @media(max-width: 925px) {
 
 
-.nav li{
-    display: none;
-} 
-    
+    .nav li {
+        display: none;
+    }
+
 }
+
 @media(max-width: 1005px) {
 
 
-    .nav li{
+    .nav li {
         display: none;
-    } 
+    }
 
-    .nav li a{
+    .nav li a {
         display: none;
     }
-        
-    }
-    
+
+}
